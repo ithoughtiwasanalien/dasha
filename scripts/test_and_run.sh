@@ -1,7 +1,7 @@
 #!/bin/sh
 
 npm install
-killall node
-killall pm2
+killall node || true
+killall pm2 || true
 ./node_modules/.bin/mocha ./tests/test.js
 node ./server.js
